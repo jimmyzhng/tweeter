@@ -1,0 +1,69 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+article.tweet {
+  display: flex;
+  border-style: solid;
+  border-color: black;
+  border-bottom: solid;
+  flex-direction: column;
+  height: 250px;
+  width: 1025px;
+}
+
+article.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  /* align-content: baseline; */
+}
+
+span.tweet-text {
+  border-bottom: solid;
+  padding: 30px;
+  font-weight: bold;
+}
+
+span.full-name {
+  padding: 10px;
+  color: #121212;
+  font-weight: 500;
+}
+
+div.tweet-pfp {
+  display: flex;
+  align-content: center;
+}
+
+span.username {
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+article.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 15px;
+}
+
+span.days-ago {
+  margin-left: 15px;
+  padding-top: 5px;
+}
+
+div.like-repost {
+  font-size: 25px;
+  margin-right: 15px;
+  color: #4056a1;
+}
+
+#john-cena {
+  height: 50px;
+  width: 50px;
+}

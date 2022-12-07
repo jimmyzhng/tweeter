@@ -1,0 +1,37 @@
+section {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+}
+
+#tweet-label::after {
+  content: "\a";
+  white-space: pre;
+}
+
+button {
+  background-color: #4056a1;
+  color: #ffffff;
+  border: 0;
+  font-size: 20px;
+  padding: 7px 10px;
+}
+
+textarea {
+  width: 1000px;
+  background: transparent;
+  border: 0;
+  border-bottom: solid;
+}
+
+.under-button {
+  font-family: Bungee;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
