@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
   $('textarea').on('input', function() {
-    let counter = $('.counter');
+    let counter = $(this).next().children('output');
     let charCount = 140 - $(this).val().length;
 
     counter.val(charCount);
@@ -16,20 +16,5 @@ $(document).ready(function() {
     }
 
   });
-
-  $('article.tweet')
-    .mouseover(function() {
-      $(this).css('box-shadow', '5px 5px 5px #747487');
-    })
-    .mouseleave(function() {
-      $(this).css('box-shadow', '0px 0px 0px black');
-    });
-
-  $('i.fa-solid')
-    .mouseover(function() {
-      $(this).css('color', '#D69400');
-    }).mouseleave(function() {
-      $(this).css('color', '#4056a1');
-    });
 
 });

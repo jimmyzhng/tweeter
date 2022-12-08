@@ -20,3 +20,7 @@ nav > span {
   flex-direction: column;
   text-align: center;
 }
+
+.nav-right i {
+  color: red;
+}

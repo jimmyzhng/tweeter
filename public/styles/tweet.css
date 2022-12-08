@@ -11,6 +11,11 @@ article.tweet {
   flex-direction: column;
   height: 250px;
   width: 1025px;
+  box-shadow: 1px 1px 1px black;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px 5px #747487;
 }
 
 article.tweet-header {
@@ -50,6 +55,14 @@ article.tweet-footer {
   font-size: 18px;
   font-weight: 600;
   padding: 5px 15px;
+}
+
+article.tweet-footer i {
+  color: #4056a1;
+}
+
+article.tweet-footer i:hover {
+  color: #d69400;
 }
 
 span.days-ago {
