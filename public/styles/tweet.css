@@ -24,12 +24,12 @@ article.tweet-header {
   flex-direction: row;
   justify-content: space-between;
   padding: 15px;
-  /* align-content: baseline; */
 }
 
 span.tweet-text {
   border-bottom: solid;
   padding: 30px;
+
   font-weight: bold;
 }
 

@@ -44,6 +44,8 @@
       src="https://kit.fontawesome.com/529272dd5b.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
   </head>
 
   <body>
@@ -67,7 +69,7 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container" id="tweets-container">
+    <main class="container">
       <section class="new-tweet">
         <form action="/tweets" method="POST">
           <label for="tweet-text" id="tweet-label"
@@ -83,6 +85,8 @@
           </div>
         </form>
       </section>
+
+      <section class="tweets" id="tweets"></section>
     </main>
   </body>
 </html>

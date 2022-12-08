@@ -1,5 +1,4 @@
 // Takes in a tweet object and responsible for returning a tweet <article> element
-
 const createTweetElement = function(tweetData) {
   return `<article class="tweet">
   <article class="tweet-header">
@@ -16,7 +15,7 @@ const createTweetElement = function(tweetData) {
   </span>
 
   <article class="tweet-footer">
-    <span class="days-ago"> ${tweetData.created_at} </span>
+    <span class="days-ago"> ${timeago.format(tweetData.created_at)} </span>
     <div class="like-repost">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
@@ -27,8 +26,10 @@ const createTweetElement = function(tweetData) {
 };
 
 const renderTweets = function(tweets) {
-  let renderedTweets = tweets.map(tweet => createTweetElement(tweet));
-  $('#tweets-container').append(renderedTweets);
+  for (let tweet of tweets) {
+    const newTweet = createTweetElement(tweet);
+    $('.tweets').prepend(newTweet);
+  }
 };
 
 const loadTweets = function() {
@@ -46,15 +47,27 @@ $(document).ready(function() {
 
   $('form').submit(function(event) {
     event.preventDefault();
-    let formData = $(this).serialize();
-    console.log(formData);
+    const formData = $(this).serialize();
+
+    // Check if tweet works
+    const tweet = formData.slice(5);
+
+    if (!tweet) {
+      return alert('There is no tweet to post!');
+    }
+
+    if (tweet.length > 140) {
+      return alert('That tweet is too long!');
+    }
 
     $.ajax({
-      url: '/tweets',
+      url: '/tweets/',
       method: 'POST',
       data: formData,
-      success: () => {
-        console.log('Success!');
+      success: (event) => {
+
+
+        loadTweets();
       }
     });
 
