@@ -1,7 +1,5 @@
 
 $(document).ready(function() {
-  console.log('ready!');
-
 
   $('textarea').on('input', function() {
     let counter = $(this).next().children('output');

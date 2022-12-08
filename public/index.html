@@ -25,11 +25,15 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
-    <!-- External JS -- />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- External JS --/>
+    <!- App JS -->
 
-    <!-- App JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script
       type="text/javascript"
@@ -58,12 +62,12 @@
         <img src="/images/profile-hex.png" />
       </div>
       <div>
-        <h2>John Cena</h2>
+        <h2>User Name</h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="tweets-container">
       <section class="new-tweet">
         <form action="/tweets" method="POST">
           <label for="tweet-text" id="tweet-label"
@@ -72,39 +76,13 @@
           <textarea name="text" id="tweet-text"></textarea>
 
           <div class="under-button">
-            <button type="submit">Tweet</button>
+            <button id="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text" id="counter"
               >140</output
             >
           </div>
         </form>
       </section>
-
-      <article class="tweet">
-        <article class="tweet-header">
-          <div class="tweet-pfp">
-            <img id="john-cena" src="/images/johncena.png" />
-            <span class="full-name">John Cena</span>
-          </div>
-
-          <span class="username">@MrJohnCena</span>
-        </article>
-
-        <span class="tweet-text">
-          Zǎoshang hǎo zhōngguó xiànzài wǒ yǒu 🍦 bīngqílín 🍦 wǒ hěn xǐhuān 🍦
-          bīngqílín 🍦 dànshì sùdù yǔ jīqíng 9 bǐ 🍦 bīngqílín 🍦 sùdù yǔ jīqíng
-          sùdù yǔ jīqíng 9
-        </span>
-
-        <article class="tweet-footer">
-          <span class="days-ago"> 1 day ago </span>
-          <div class="like-repost">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </article>
-      </article>
     </main>
   </body>
 </html>
