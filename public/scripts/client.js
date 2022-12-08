@@ -26,6 +26,7 @@ const createTweetElement = function(tweetData) {
 };
 
 const renderTweets = function(tweets) {
+  $('.tweet-container').empty();
   for (let tweet of tweets) {
     const newTweet = createTweetElement(tweet);
     $('.tweets').prepend(newTweet);
@@ -43,7 +44,7 @@ const loadTweets = function() {
 // Test / driver code (temporary)
 $(document).ready(function() {
   console.log('READY!');
-  loadTweets();
+
 
   $('form').submit(function(event) {
     event.preventDefault();
@@ -65,12 +66,12 @@ $(document).ready(function() {
       method: 'POST',
       data: formData,
       success: (event) => {
-
-
         loadTweets();
       }
     });
 
   });
+
+  loadTweets();
 });
 
