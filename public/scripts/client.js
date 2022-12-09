@@ -1,7 +1,15 @@
+// Preventing XSS with Escaping
+const escapeText = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 // Takes in a tweet object and responsible for returning a tweet <article> element
 const createTweetElement = function(tweetData) {
   return `<article class="tweet">
   <article class="tweet-header">
+
     <div class="tweet-pfp">
       <img id="pfp" src="${tweetData.user.avatars}" />
       <span class="full-name">${tweetData.user.name}</span>
@@ -11,7 +19,7 @@ const createTweetElement = function(tweetData) {
   </article>
 
   <span class="tweet-text">
-  ${tweetData.content.text}
+  ${escapeText(tweetData.content.text)}
   </span>
 
   <article class="tweet-footer">
@@ -21,12 +29,14 @@ const createTweetElement = function(tweetData) {
       <i class="fa-solid fa-retweet"></i>
       <i class="fa-solid fa-heart"></i>
     </div>
+
   </article>
 </article>`;
 };
 
+
 const renderTweets = function(tweets) {
-  $('.tweet-container').empty();
+  $('.tweets').empty();
   for (let tweet of tweets) {
     const newTweet = createTweetElement(tweet);
     $('.tweets').prepend(newTweet);
@@ -45,20 +55,28 @@ const loadTweets = function() {
 $(document).ready(function() {
   console.log('READY!');
 
-
   $('form').submit(function(event) {
     event.preventDefault();
     const formData = $(this).serialize();
+    $('#error').css('display', 'none');
 
     // Check if tweet works
     const tweet = formData.slice(5);
 
     if (!tweet) {
-      return alert('There is no tweet to post!');
+      $('#error')
+        .html('<i class="fa-solid fa-circle-exclamation"> </i> Error! No tweet found.')
+        .hide();
+
+      return $('#error').slideDown('fast', () => console.log('success'));
     }
 
     if (tweet.length > 140) {
-      return alert('That tweet is too long!');
+      $('#error')
+        .html('<i class="fa-solid fa-circle-exclamation"> </i> Error! That tweet is too long.')
+        .hide();
+
+      return $('#error').slideDown('slow', () => console.log('Sucess. no tweet found'));
     }
 
     $.ajax({
@@ -68,10 +86,10 @@ $(document).ready(function() {
       success: (event) => {
         loadTweets();
       }
-    });
+    })
+      .then(() => { $('#tweet-textbox').val(''); });
 
   });
-
   loadTweets();
 });
 

@@ -21,6 +21,10 @@ button {
   padding: 7px 10px;
 }
 
+button:hover {
+  box-shadow: 2.5px 2.5px 2.5px #747487;
+}
+
 textarea {
   width: 1000px;
   background: transparent;
@@ -33,4 +37,8 @@ textarea {
   padding-top: 5px;
   display: flex;
   justify-content: space-between;
+}
+
+#error {
+  color: #ff5454;
 }

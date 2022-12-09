@@ -71,11 +71,13 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <span id="error"></span>
+        <br />
         <form action="/tweets" method="POST">
           <label for="tweet-text" id="tweet-label"
             >What are you humming about?</label
           >
-          <textarea name="text" id="tweet-text"></textarea>
+          <textarea name="text" id="tweet-textbox"></textarea>
 
           <div class="under-button">
             <button id="tweet-button" type="submit">Tweet</button>
