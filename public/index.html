@@ -4,6 +4,8 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,36 +61,38 @@
       </div>
     </nav>
 
-    <header class="container">
-      <div class="profile-pic">
-        <img src="/images/profile-hex.png" />
-      </div>
-      <div>
-        <h2>John Cena</h2>
-      </div>
-    </header>
+    <div class="header-container">
+      <header class="profile-container">
+        <div class="profile">
+          <img src="/images/profile-hex.png" />
+          <h2>John Cena</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <span id="error"></span>
-        <br />
-        <form action="/tweets" method="POST">
-          <label for="tweet-text" id="tweet-label"
-            >What are you humming about?</label
-          >
-          <textarea name="text" id="tweet-textbox"></textarea>
-
-          <div class="under-button">
-            <button id="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text" id="counter"
-              >140</output
+      <main class="main-container">
+        <section class="new-tweet">
+          <div id="error"></div>
+          <form class="form" action="/tweets" method="POST">
+            <label for="tweet-text" id="tweet-label"
+              >What are you humming about?</label
             >
-          </div>
-        </form>
-      </section>
+            <textarea name="text" id="tweet-textbox"></textarea>
 
-      <section class="tweets" id="tweets"></section>
-    </main>
+            <div class="under-button">
+              <button id="tweet-button" type="submit">Tweet</button>
+              <output
+                name="counter"
+                class="counter"
+                for="tweet-text"
+                id="counter"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
+
+        <section class="tweets" id="tweets"></section>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,7 +1,13 @@
-section {
-  padding-top: 100px;
+.form {
+  width: 100%;
+}
+
+section.new-tweet {
+  margin-top: 250px;
   display: flex;
+  margin-bottom: 50px;
   flex-direction: column;
+  position: relative;
 }
 
 label {
@@ -24,8 +30,9 @@ button {
 button:hover {
   box-shadow: 2.5px 2.5px 2.5px #747487;
 }
+
 textarea {
-  width: 1000px;
+  width: 100%;
   background: transparent;
   border: 0;
   border-bottom: solid;
@@ -40,4 +47,13 @@ textarea {
 
 #error {
   color: #ff5454;
+  border-color: black;
+  display: flex;
+  position: absolute;
+  top: -30px;
+}
+@media screen and (max-width: 1024px) {
+  section.new-tweet {
+    margin-top: 100px;
+  }
 }

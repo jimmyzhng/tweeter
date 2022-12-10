@@ -25,3 +25,11 @@ nav > span {
 .nav-right i {
   color: red;
 }
+
+@media screen and (max-width: 1024px) {
+  nav {
+    position: relative;
+    background-color: #e8e8e8;
+    background-image: url("https://www.transparenttextures.com/patterns/escheresque-dark.png");
+  }
+}

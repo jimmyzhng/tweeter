@@ -53,7 +53,6 @@ const loadTweets = function() {
 
 // Test / driver code (temporary)
 $(document).ready(function() {
-  console.log('READY!');
 
   $('form').submit(function(event) {
     event.preventDefault();
@@ -68,7 +67,7 @@ $(document).ready(function() {
         .html('<i class="fa-solid fa-circle-exclamation"> </i> Error! No tweet found.')
         .hide();
 
-      return $('#error').slideDown('fast', () => console.log('success'));
+      return $('#error').slideDown('fast');
     }
 
     if (tweet.length > 140) {
@@ -76,7 +75,7 @@ $(document).ready(function() {
         .html('<i class="fa-solid fa-circle-exclamation"> </i> Error! That tweet is too long.')
         .hide();
 
-      return $('#error').slideDown('fast', () => console.log('Sucess. no tweet found'));
+      return $('#error').slideDown('fast');
     }
 
     $.ajax({

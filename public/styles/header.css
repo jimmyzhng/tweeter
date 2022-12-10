@@ -1,13 +1,27 @@
-header {
-  display: flex;
-  flex-direction: column;
-  padding-top: 5.5em;
+.profile-container {
   height: 385px;
-  width: 90%;
-  margin: 0 auto 0 auto;
+  margin-top: 10em;
 }
 
-header > div {
-  display: flex;
-  justify-content: center;
+.profile-container > .profile {
+  background-color: #e8e8e8;
+  background-image: url("https://www.transparenttextures.com/patterns/escheresque-dark.png");
+  margin: 0 100px;
+  padding: 60px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+header h2 {
+  display: block;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile-container {
+    margin-top: 0;
+  }
+  .profile-container > .profile {
+    margin: 0;
+  }
 }

@@ -4,8 +4,6 @@ article.tweet {
   border-color: black;
   border-bottom: solid;
   flex-direction: column;
-  height: 225px;
-  width: 1025px;
   box-shadow: 1px 1px 1px #747487;
   margin-bottom: 25px;
 }
@@ -62,7 +60,7 @@ article.tweet-footer i:hover {
 }
 
 span.days-ago {
-  margin-left: 15px;
+  padding-left: 15px;
   padding-top: 5px;
 }
 
@@ -75,4 +73,7 @@ div.like-repost {
 #pfp {
   height: 50px;
   width: 50px;
+}
+
+@media screen and (max-width: 1024px) {
 }
