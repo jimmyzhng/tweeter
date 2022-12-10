@@ -1,11 +1,9 @@
 header {
   display: flex;
   flex-direction: column;
-  padding-top: 225px;
+  padding-top: 5.5em;
   height: 385px;
   width: 90%;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto 0 auto;
 }
 

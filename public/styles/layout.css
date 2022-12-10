@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
@@ -34,6 +35,8 @@ main {
   right: 5%;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}

@@ -76,7 +76,7 @@ $(document).ready(function() {
         .html('<i class="fa-solid fa-circle-exclamation"> </i> Error! That tweet is too long.')
         .hide();
 
-      return $('#error').slideDown('slow', () => console.log('Sucess. no tweet found'));
+      return $('#error').slideDown('fast', () => console.log('Sucess. no tweet found'));
     }
 
     $.ajax({
