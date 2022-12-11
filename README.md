@@ -18,11 +18,11 @@ When resized to a width of under 1024px, our page adjusts to a cleaner look, tha
 
 When we try to post a tweet without any text, we get a nice error message that is animated with a slide effect.
 
-<img src="./public/images/tweeter3.png" alt="Homepage3" title="Homepage3">
+<img src="./public/images/tweeter4.png" alt="Homepage4" title="Homepage4">
 
 This also happens when our tweet is above 140 characters, just like actual Twitter!
 
-<img src="./public/images/tweeter4.png" alt="Homepage4" title="Homepage4">
+<img src="./public/images/tweeter5.png" alt="Homepage5" title="Homepage5">
 
 ## Getting Started
 
