@@ -86,7 +86,8 @@ $(document).ready(function() {
         loadTweets();
       }
     })
-      .then(() => { $('#tweet-textbox').val(''); });
+      .then(() => { $('#tweet-textbox').val(''); })
+      .then(() => { $('#counter').val('140'); });
 
   });
   loadTweets();
